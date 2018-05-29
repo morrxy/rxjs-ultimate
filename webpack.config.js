@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const merge = require('webpack-merge')
 const glob = require('glob')
 const fs = require('fs')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const PATHS = {
   app: path.join(__dirname, 'src'),
@@ -50,7 +51,9 @@ const productionConfig = {
     rules: []
   },
 
-  plugins: []
+  plugins: [
+    new CleanWebpackPlugin([PATHS.build])
+  ]
 }
 
 module.exports = (mode) => {

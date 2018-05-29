@@ -1,4 +1,5 @@
 import { Observable } from 'rxjs'
+import { share } from 'rxjs/operators'
 
 let stream$ = Observable.create((observer) => {
   observer.next(1)
@@ -6,7 +7,9 @@ let stream$ = Observable.create((observer) => {
   observer.next(3)
   observer.complete()
 })
-  .share()
+  .pipe(
+    share()
+  )
 
 stream$.subscribe(
   (data) => console.log('subscriber 1', data),

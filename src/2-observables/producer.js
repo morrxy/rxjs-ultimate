@@ -10,8 +10,6 @@ class Producer {
   }
 }
 
-window.Producer = Producer
-
 let stream$ = Observable.create((observer) => {
   const p = new Producer()
   observer.next(p.nextValue())

@@ -1,4 +1,4 @@
-example for https://legacy.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details
+runable example code for https://legacy.gitbook.com/book/chrisnoring/rxjs-5-ultimate/details
 
 ## how to run the code
 

@@ -34,8 +34,11 @@ const commonConfig = {
 }
 
 const developmentConfig = {
+  devServer: {
+    stats: 'errors-only'
+  },
+
   devtool: 'cheap-module-eval-source-map',
-  // devtool: 'eval-source-map',
 
   module: {
     rules: []
